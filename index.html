@@ -1,13 +1,134 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> Hockey's website</title>
+    <!-- daisyUI cdn -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- manrope font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
+    <style>
+        .font-manrope{
+            font-family: "Manrope", sans-serif;
+        }
+    </style>
+    <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+              colors: {
+                clifford: '#da373d',
+                'hockey-primary': '#FF4240',
+                'hockey-primary-text': 'rgba(255, 255, 255, 0.6)',
+              }
+            }
+          }
+        }
+      </script>
+      <!-- font awesome -->
+      <script src="https://kit.fontawesome.com/ed00ea4d14.js" crossorigin="anonymous"></script>
 </head>
-<body>
-    <header></header>
-    <main></main>
+<body class="font-manrope">
+    <header class=" md:container mx-auto lg:px-32 px-2 py-2  mb-32">
+        <nav >
+            <div class="navbar bg-base-100">
+                <div class="navbar-start">
+                  <div class="dropdown">
+                    <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="h-5 w-5"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor">
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                          d="M4 6h16M4 12h8m-8 6h16" />
+                      </svg>
+                    </div>
+                    <ul
+                      tabindex="0"
+                      class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
+                      <li class="hover:text-hockey-primary text-sm"><a>Home </a></li>
+                      <li class="hover:text-hockey-primary text-sm"><a> About</a></li>
+                      <li class="hover:text-hockey-primary text-sm"><a> Pages</a></li>
+                      <li class="hover:text-hockey-primary text-sm"><a> Blog</a></li>
+                      <li class="hover:text-hockey-primary text-sm"><a> Contact</a></li> 
+                    </ul>
+                  </div>
+                  <a class=" font-extrabold text-2xl md:text-4xl">Hockey<span class="text-hockey-primary">’</span>s</a>
+                </div>
+                <div class="navbar-center hidden lg:flex">
+                  <ul class="menu menu-horizontal px-1">
+                    <li class="hover:text-hockey-primary text-sm"><a>Home </a></li>
+                    <li class="hover:text-hockey-primary text-sm"><a> About</a></li>
+                    <li class="hover:text-hockey-primary text-sm"><a> Pages</a></li>
+                    <li class="hover:text-hockey-primary text-sm"><a> Blog</a></li>
+                    <li class="hover:text-hockey-primary text-sm"><a> Contact</a></li>
+                  </ul>
+                </div>
+                <div class="navbar-end flex gap-2 md:gap-6">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                  <a class="btn bg-hockey-primary btn-outline text-white md:px-6">Get Ticket</a>
+                </div>
+              </div>
+        </nav>
+        
+            <div class="carousel w-full rounded-xl  ">
+                <div id="slide1" class="carousel-item relative w-full">
+                  <img
+                    src="./Images/1.png"
+                    class="w-full" />
+                  <div class="absolute left-10 gap-3 lg:gap-5 top-3/4 flex -translate-y-1/2 transform ">
+                    <a href="#slide4" class="btn btn-circle btn-outline bg-black text-white">❮</a>
+                    <a href="#slide2" class="btn btn-circle btn-outline bg-black text-white">❯</a>
+                  </div>
+                </div>
+                <div id="slide2" class="carousel-item relative w-full">
+                  <img
+                    src="./Images/2.webp"
+                    class="w-full" />
+                  <div class="absolute  left-10 gap-3 lg:gap-5 top-3/4 flex -translate-y-1/2 transform justify-between">
+                    <a href="#slide1" class="btn btn-circle  btn-outline bg-black text-white">❮</a>
+                    <a href="#slide3" class="btn btn-circle  btn-outline bg-black text-white">❯</a>
+                  </div>
+                </div>
+                <div id="slide3" class="carousel-item relative w-full">
+                  <img
+                    src="./Images/3.webp"
+                    class="w-full" />
+                  <div class="absolute  left-10 gap-3 lg:gap-5 top-3/4 flex -translate-y-1/2 transform justify-between">
+                    <a href="#slide2" class="btn btn-circle  btn-outline bg-black text-white">❮</a>
+                    <a href="#slide4" class="btn btn-circle  btn-outline bg-black text-white">❯</a>
+                  </div>
+                </div>
+                <div id="slide4" class="carousel-item relative w-full">
+                  <img
+                    src="./Images/4.webp"
+                    class="w-full" />
+                  <div class="absolute  left-10 gap-3 lg:gap-5 top-3/4 flex -translate-y-1/2 transform justify-between">
+                    <a href="#slide3" class="btn btn-circle  btn-outline bg-black text-white">❮</a>
+                    <a href="#slide1" class="btn btn-circle  btn-outline bg-black text-white">❯</a>
+                  </div>
+                </div>
+            </div>
+            <div class="relative">
+                <div class="card lg:absolute lg:bottom-12 lg:right-12 bg-black w-full lg:w-1/3 shadow-xl ">
+                    <div class="card-body">
+                      <h2 class="card-title text-white">Meet all the heroes from the field</h2>
+                      <p class=" font-medium text-sm text-hockey-primary-text ">Dit amet consectetur. Condimentum dignissim adipiscing aliquam turpis placerat dolor. Purus urna in sit nullam proin. </p>
+                    </div>
+                  </div>
+            </div>
+              
+    </header>
+    <main class="md:container mx-auto lg:px-32 px-2 py-2  mb-32"></main>
     <footer></footer>
 </body>
 </html>
